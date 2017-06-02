@@ -20,6 +20,34 @@
   <build>
       <!-- 将WebProject项目打包成WebProject.war自动部署到tomcat服务器的webapps目录下面 -->
     <finalName>WebProject</finalName>
-    
+    <plugins>
+          <plugin>
+              <groupId>org.codehaus.cargo</groupId>
+              <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.4.9</version>
+                <configuration>
+                    <container>
+                          <!-- 指明使用的tomcat服务器版本 -->
+                        <containerId>tomcat7x</containerId>
+                        <!--指明tomcat服务器的安装目录 -->
+                        <home>/usr/local/tools/aotoTest/tomcat</home>
+                    </container>
+                    <configuration>
+                        <type>existing</type>
+                        <!--指明tomcat服务器的安装目录 -->
+                        <home>/usr/local/tools/aotoTest/tomcat</home>
+                    </configuration>
+                </configuration>
+                <executions>  
+                  <execution>  
+                      <id>cargo-run</id>  
+                      <phase>install</phase>  
+                      <goals>  
+                          <goal>run</goal>  
+                      </goals>  
+                  </execution>  
+              </executions>
+          </plugin>
+      </plugins>
   </build>
 </project>
