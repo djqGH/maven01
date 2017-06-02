@@ -33,9 +33,17 @@
                         <home>/usr/local/tools/aotoTest/tomcat</home>
                     </container>
                     <configuration>
-                        <type>existing</type>
-                        <!--指明tomcat服务器的安装目录 -->
-                        <home>/usr/local/tools/aotoTest/tomcat</home>
+ <!--                        <type>existing</type>
+                        指明tomcat服务器的安装目录
+                        <home>/usr/local/tools/aotoTest/tomcat</home> -->
+                        <!--standalone模式-->
+					<type>standalone</type>
+					<home>/usr/local/tools/aotoTest/tomcat/temp/cargo</home>
+			
+						<properties>
+						<!-- 更改监听端口 -->
+						<cargo.servlet.port>8088</cargo.servlet.port>
+						</properties>
                     </configuration>
                 </configuration>
                 <executions>  
