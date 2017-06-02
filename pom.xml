@@ -20,5 +20,6 @@
   <build>
       <!-- 将WebProject项目打包成WebProject.war自动部署到tomcat服务器的webapps目录下面 -->
     <finalName>WebProject</finalName>
+    
   </build>
 </project>
