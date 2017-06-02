@@ -24,7 +24,7 @@
           <plugin>
               <groupId>org.codehaus.cargo</groupId>
               <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.4.9</version>
+                 <version>1.2.3</version>
                 <configuration>
                     <container>
                           <!-- 指明使用的tomcat服务器版本 -->
@@ -33,17 +33,9 @@
                         <home>/usr/local/tools/aotoTest/tomcat</home>
                     </container>
                     <configuration>
- <!--                        <type>existing</type>
-                        指明tomcat服务器的安装目录
-                        <home>/usr/local/tools/aotoTest/tomcat</home> -->
-                        <!--standalone模式-->
-					<type>standalone</type>
-					<home>/usr/local/tools/aotoTest/tomcat/temp/cargo</home>
-			
-						<properties>
-						<!-- 更改监听端口 -->
-						<cargo.servlet.port>8088</cargo.servlet.port>
-						</properties>
+                        <type>existing</type>
+                        <!--指明tomcat服务器的安装目录 -->
+                        <home>/usr/local/tools/aotoTest/tomcat</home>
                     </configuration>
                 </configuration>
                 <executions>  
